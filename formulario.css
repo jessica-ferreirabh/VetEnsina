@@ -1,0 +1,159 @@
+body{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(255, 174, 0, 0.26);
+}
+
+
+.button{
+    font-size:15px;
+}
+
+.teste{
+
+margin: 0;
+padding: 5px 300px;
+font-family: 
+}
+
+li {
+  list-style: none;
+}
+
+.logo {
+  background-color:rgb(255, 166, 1);
+     text-align: right;
+    min-height: 115px;
+    padding: 5px 0;
+}
+
+.logo img{
+    max-width: 180px;
+    width: auto;
+    float: left;
+  
+}
+
+.topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(255, 166, 1);
+  }
+  
+ header li {
+    float: left;
+  }
+  
+  header li a {
+    display: block;
+    color:  rgb(90, 24, 24);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  
+  li a:hover {
+    background-color:  rgb(255, 205, 113);  
+  }
+
+  .rodape {
+  background-color:rgb(255, 166, 1);
+  display: flex;
+  flex-direction: row;
+  color: rgb(90, 24, 24);
+  padding: 1%;
+  align-items: center;
+  justify-content: space-around;
+ 
+  }
+
+  .opcoes{
+    width: 40%;
+  }
+  .sobre{
+    width: 40%;
+  }
+  
+
+#tela {
+  text-align: justify;
+  justify-content: justify;
+  padding:50px;
+  margin: 70px;
+  display: inblock;
+  font-size: 17px
+}
+#letra:first-letter{
+  font-size: 200%;
+  font-style: italic;
+  color:black
+}
+
+.materia{
+  position: sticky;
+  width: 600px;
+  height: 293px;
+  right: 500px;
+  left: 350px;
+  margin: auto;
+  vertical-align: top;
+}
+
+#artigos-titulo {
+  margin: 40px;
+}
+
+.w3-content{
+   padding-left: 300px;
+    display: inline-block;
+    
+    width: 25%; 
+    height: 200px;
+   
+
+}
+
+form{
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 355px;
+}
+table,th{
+text-align: center;
+background-color: orange;
+border: 2px solid orange;
+border-collapse: collapse;
+padding-top:10px;
+padding-bottom: 10px;
+padding-right: 100px;
+padding-left: 100px;
+font-size: medium;
+font-display: verdana;
+}
+td{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: small;
+
+background-color: rgb(252, 225, 151);
+text-align: left;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 50px;
+padding-right: 50px;
+}
+
+input[type=email],input[type=password],input[type=text],input[type=submit]{
+width: 300px;
+padding: 5px;
+box-sizing: border-box;
+border: 1px solid orange;
+border-radius: 5px;
+}
+input[type=submit]{
+  background-color: rgb(255, 205, 113);  
+  width: 120px ;
+  
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Login</title>
+	<link rel="stylesheet" href="stylelogin.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	 crossorigin="anonymous">
+	</script>
+</head>
+<body>
+  <script>
+    function loginFunction(){
+      var usuario = document.getElementById("usuario").value;
+      var senha = document.getElementById("senha").value;
+
+      usuario = usuario.toLowerCase();
+      senha=senha.toLowerCase();
+
+      if (usuario=="admin" && senha=="admin") {
+        window.location.href='postagens.html';
+        return true;
+      }else{
+        alert("Dados incorretos, tente novamente");
+        return false; 
+      }          
+    }
+  </script>
+	<header>
+		<div class="menu">
+			<div class="logo">
+				<img src="imagens/logo3.png"
+               
+                  onclick="window.location.href = 'index.html';">
+                <div class="topnav" style = "display: inline-block">
+                    <ul>
+                        
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+</header>
+    <form name="login" action ="postagens.html" onsubmit="return loginFunction()">
+        <table class="login"> 
+            <tr>
+                <th>Área de Login</th>
+            </tr>
+           <tr>
+               <td >Usuário:<br>
+                  <input type="text" id="usuario" placeholder="Insira seu usuário">
+              </td>
+           </tr>
+              <tr> <td >Senha:<br>
+                  <input type="password" id="senha" placeholder="Insira sua senha">
+              </td></tr>
+             
+              <tr>
+                
+                  <td><input type="submit" name="enviar" id="enviar"></input>
+                  </td>
+            
+              </tr>
+              <tr>
+                <td><a href="Formulario.html">cadastre-se</a></td>
+              </tr>
+              
+        </table>
+      
+      </form>
+<footer>
+    <div class="rodape">
+    <div class="opcoes">
+            <h4>Opções:</h4>
+            <ul>
+                <li>Adoção Consciente</li>
+                <li>Contato</li>
+                <li>Termos de uso</li>
+                <li>Como funciona?</li>
+                <li>Privacidade e segurança</li>
+            </ul>
+        </div>
+        <div class="sobre">
+            <h4>SOBRE NÓS</h4>
+            <p>O VetEnsina é um projeto realizado por alunas do curso de Engenharia de Software na PUC Minas,
+                com intuito de fornecer um espaço para que donos de pets possam encontrar conteúdos confiáveis
+                para cuidar dos seus amigos e localizar os melhores adestradores de sua região. </p>
+    
+            <H5>©Copyright 2019</H5>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

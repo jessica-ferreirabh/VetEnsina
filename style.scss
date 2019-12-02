@@ -1,0 +1,147 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 100vh;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(255, 174, 0, 0.26);
+
+    &>header {
+        background-color: #ffa601;
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+
+        &>nav>ul {
+            display: flex;
+            list-style: none;
+
+            &>li {
+                box-sizing: border-box;
+                padding: 12px;
+
+                &:hover {
+                    background-color: #ffcd71;
+                }
+
+                &>a {
+                    color: inherit;
+                    text-decoration: inherit;
+                }
+            }
+        }
+    }
+
+    &>footer {
+        box-sizing: border-box;
+        background-color: #ffa601;
+        color: #5a1818;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 32px;
+
+        &>* {
+            width: 40%;
+            min-width: 300px;
+        }
+    }
+}
+
+.logo {
+    height: 128px;
+}
+
+.filtro-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 32px;
+
+    &>* {
+        padding: 8px;
+    }
+}
+
+.carousel {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+
+    &>.slide {
+        width: 800px;
+
+        &>img {
+            width: 100%;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#tela {
+    display: grid;
+    box-sizing: border-box;
+    padding: 16px;
+    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    &>.comportamento {
+        height: 200px;
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+
+        &>a {
+            color: white;
+            text-decoration: none;
+
+            &>img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            &>span {
+                position: absolute;
+                padding: 24px;
+                bottom: 0;
+                width: 100%;
+                display: block;
+                box-sizing: 24px;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.5)
+            }
+        }
+    }
+}
+
+#titulo {
+    text-align: center;
+}
+
+#banner {
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    width: 512px;
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+#conteudo {
+    box-sizing: border-box;
+    padding: 16px;
+    text-align: justify;
+    text-indent: 4ch;
+}

@@ -1,13 +1,7 @@
-
-
 $(document).ready(function () {
-
     let data = JSON.parse(localStorage.getItem("adestradores"));
     console.log(data)
     mostrarinfo(data)
-    
-
-
 })
 
 function mostrarinfo (dbinfo){

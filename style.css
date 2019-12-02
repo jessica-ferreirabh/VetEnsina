@@ -1,34 +1,183 @@
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: rgba(255, 174, 0, 0.26);
 }
 
 body > header {
+  background-color: #ffa601;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 8px;
 }
 
-body > header > nav ul {
+body > header > nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
 
 body > header > nav > ul > li {
-  padding: 0 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 12px;
 }
 
-body > header > nav ul > li > a {
-  color: inherit;
-  text-decoration: inherit; 
+body > header > nav > ul > li:hover {
+  background-color: #ffcd71;
 }
 
-body > header nav ul a {
+body > header > nav > ul > li > a {
   color: inherit;
-  text-decoration: inherit; 
+  text-decoration: inherit;
+}
+
+body > footer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #ffa601;
+  color: #5a1818;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 32px;
+}
+
+body > footer > * {
+  width: 40%;
+  min-width: 300px;
 }
 
 .logo {
   height: 128px;
 }
+
+.filtro-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 32px;
+}
+
+.filtro-container > * {
+  padding: 8px;
+}
+
+.carousel {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carousel > .slide {
+  width: 800px;
+}
+
+.carousel > .slide > img {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#tela {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 16px;
+  grid-gap: 16px;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+#tela > .comportamento {
+  height: 200px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#tela > .comportamento > a {
+  color: white;
+  text-decoration: none;
+}
+
+#tela > .comportamento > a > img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#tela > .comportamento > a > span {
+  position: absolute;
+  padding: 24px;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  -webkit-box-sizing: 24px;
+          box-sizing: 24px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#titulo {
+  text-align: center;
+}
+
+#banner {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  padding: 8px;
+  width: 512px;
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+#conteudo {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 16px;
+  text-align: justify;
+  text-indent: 4ch;
+}
+/*# sourceMappingURL=style.css.map */

@@ -9,10 +9,8 @@ var dadosformu = {
             email: 'dogensina@gmail.com',
             especialização: 'Cachorro e Gato',
             experiencia: '2 Anos',
-
             urlimagem: 'adestradorluis.jpg',
         },
-
         {
             nome: 'Marcia Camila Antonia',
             idade:'30  anos',
@@ -22,12 +20,8 @@ var dadosformu = {
             email: 'adestreseupet@gmail.com',
             especialização: 'Gato e Cachoro',
             experiencia: '5 Anos',
-
             urlimagem: 'adestradormarcia.jpg',
-
         },
-
-
         {
             nome: 'Lucas Alves',
             idade:'32  anos',
@@ -37,11 +31,8 @@ var dadosformu = {
             email: 'adestreseupetrj@gmail.com',
             especialização: 'Cachorro e Gato',
             experiencia: '1 Ano',
-
             urlimagem: 'lucas.jpg',
-
         },
-
         {
             nome: 'Ludmila Stefany Santos',
             idade:'23  anos',
@@ -51,20 +42,14 @@ var dadosformu = {
             email: 'seupetbh@gmail.com',
             especialização: 'Cachorro e Gato',
             experiencia: '4 Anos',
-
             urlimagem: 'lud.jpg',
-
         },
     ]
 }
 
 $(document).ready(function() {
-
         let database = localStorage.getItem("adestradores");
-    
         database = !database ? localStorage.setItem("adestradores", JSON.stringify(dadosformu)) : JSON.parse(database);
-        
-
 })
 
 

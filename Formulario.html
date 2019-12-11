@@ -30,17 +30,16 @@
         </div>
     </header>
     
-    <form method="POST" id = "info">
+    <form id = "info">
         <div class="container">
 
             <table class="formulario">
                 <tr>
                     <th>Cadastro</th>
                 </tr>
-
                 <tr>
-                    <td> Nome:
-                        <input type="text" placeholder="Digite o nome completo" id="nome" name="nome" required>
+                    <td><br> Nome:
+                        <input type="text" placeholder="Digite o nome completo" id="nome" name="nome" required><br><br>
                     </td>
                 </tr>
 
@@ -48,6 +47,11 @@
                     <td class="sexo">Sexo:
                         <input type="checkbox" class="sexo" name="sexo1" value="Feminino"> Feminino
                         <input type="checkbox" class="sexo"name="sexo2" value="Masculino">Masculino<br><br>
+                    </td>
+                </tr>
+                <tr id="idade">
+                    <td > Idade:
+                        <input type="text" id="idade" name="idade" placeholder="Digite a sua idade" required><br><br>
                     </td>
                 </tr>
                 <tr id="cidade">
@@ -65,16 +69,20 @@
                 </tr>
                 <tr>
                     <td >
-                        Experiência:
-                        <input type="text" class="curriculo" name="curriculo" placeholder="Informe seu currículo "
+                        Especialização:
+                        <input type="text" class="especializacao" name="especializacao" placeholder="Informe a sua especialização (Exemplo: Cachorro) "
                             required><br><br>
                     </td>
                 </tr>
                 <tr>
+                    <td >
+                        Experiência:
+                        <input type="text" class="curriculo" name="curriculo" placeholder="Informe o seu tempo de experiência" required><br><br>
+                    </td>
+                </tr>
+                <tr>
                     <td>
-                        Selecione uma foto sua: <input type="file" id="getimage" name="foto"><br><br>
-                        <div id= "imgstore"></div>
-                        <div id = "jsonstore"></div>
+                        Selecione uma foto sua: <input type="file" id="inputImage"/><br><br>
                     </td>
                 </tr>
                 <tr>
@@ -91,7 +99,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <input id="enviar" type="button" name="enviar" value="cadastrar" ></input>
+                        <input id="enviar" type="button" name="enviar" value="Cadastrar" ></input>
                     </td>
                 </tr>
                 <tr>

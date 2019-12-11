@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <title>VetEnsina</title>
 </head>
-
 <body onload="Conteudoanimais()">
     <header>
         <a href="./">
@@ -22,6 +20,23 @@
             </ul>
         </nav>
     </header>
+    <div class="carousel ">
+        <div class="slide">
+            <img src="/imagens/dog1.jpg">
+        </div>
+        <div class="slide">
+            <img src="/imagens/dog2.jpg">
+        </div>
+        <div class="slide">
+            <img src="/imagens/dog3.jpg">
+        </div>
+        <div class="slide">
+            <img src="/imagens/dog5.jpg">
+        </div>
+        <div class="slide">
+            <img src="/imagens/dog6.jpg">
+        </div>
+    </div>
     <aside class="filtro-container">
         <div>
             <label for="filtro_animal">Selecione o Pet:</label>
@@ -43,14 +58,6 @@
         </div>
         <button class="button" onclick="Conteudoanimais()">Aplicar Filtros</button>
     </aside>
-    <div class="carousel ">
-        <div class="slide">
-            <img src="pets20.jpg">
-        </div>
-        <div class="slide">
-            <img src="pets21.jpg">
-        </div>
-    </div>
     <script>
         var myIndex = 0;
         carousel();

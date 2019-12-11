@@ -2,7 +2,7 @@ var dadosformu = {
     formul: [
         {
             nome: 'Luis Atonio Santos',
-            idade:'40  anos',
+            idade:'40',
             sexo: 'Masculino',
             cidade: 'Nova Lima',
             estado: 'Minas Gerais',
@@ -13,7 +13,7 @@ var dadosformu = {
         },
         {
             nome: 'Marcia Camila Antonia',
-            idade:'30  anos',
+            idade:'30',
             sexo: 'Feminino',
             cidade: 'São Paulo',
             estado: 'São Paulo',
@@ -24,7 +24,7 @@ var dadosformu = {
         },
         {
             nome: 'Lucas Alves',
-            idade:'32  anos',
+            idade:'32',
             sexo: 'Masculino',
             cidade: 'Duque de Caxias',
             estado: 'Rio de Janeiro',
@@ -35,7 +35,7 @@ var dadosformu = {
         },
         {
             nome: 'Ludmila Stefany Santos',
-            idade:'23  anos',
+            idade:'23',
             sexo: 'Feminino',
             cidade: 'Belo Horizonte',
             estado: 'Minas Gerais',

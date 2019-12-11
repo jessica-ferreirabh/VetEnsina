@@ -5,8 +5,6 @@ $(document).ready(function () {
     let data = JSON.parse(localStorage.getItem("adestradores"));
     console.log(data)
     mostrarinfo(data)
-    
-
 
 })
 
@@ -33,7 +31,7 @@ function mostrarinfo (dbinfo){
             </div>
 
             <div class="idade">
-            <h4> ${dbinfo.formul[i].idade}</h4>
+            <h4> ${dbinfo.formul[i].idade} anos</h4>
             </div>
 
             <div class="cidade">
@@ -61,24 +59,4 @@ function mostrarinfo (dbinfo){
 
     }
     $("#conteudo").append(adestradores);
-} 
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

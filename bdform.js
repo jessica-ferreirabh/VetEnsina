@@ -7,9 +7,9 @@ var dadosformu = {
             cidade: 'Nova Lima',
             estado: 'Minas Gerais',
             email: 'dogensina@gmail.com',
-            especialização: 'Cachorro e Gato',
+            especializacao: 'Cachorro e Gato',
             experiencia: '2 Anos',
-            urlimagem: 'adestradorluis.jpg',
+            imgData: 'adestradorluis.jpg'
         },
         {
             nome: 'Marcia Camila Antonia',
@@ -18,9 +18,9 @@ var dadosformu = {
             cidade: 'São Paulo',
             estado: 'São Paulo',
             email: 'adestreseupet@gmail.com',
-            especialização: 'Gato e Cachoro',
+            especializacao: 'Gato e Cachoro',
             experiencia: '5 Anos',
-            urlimagem: 'adestradormarcia.jpg',
+            imgData: 'adestradormarcia.jpg'
         },
         {
             nome: 'Lucas Alves',
@@ -29,9 +29,9 @@ var dadosformu = {
             cidade: 'Duque de Caxias',
             estado: 'Rio de Janeiro',
             email: 'adestreseupetrj@gmail.com',
-            especialização: 'Cachorro e Gato',
+            especializacao: 'Cachorro e Gato',
             experiencia: '1 Ano',
-            urlimagem: 'lucas.jpg',
+            imgData: 'lucas.jpg'
         },
         {
             nome: 'Ludmila Stefany Santos',
@@ -40,16 +40,20 @@ var dadosformu = {
             cidade: 'Belo Horizonte',
             estado: 'Minas Gerais',
             email: 'seupetbh@gmail.com',
-            especialização: 'Cachorro e Gato',
+            especializacao: 'Cachorro e Gato',
             experiencia: '4 Anos',
-            urlimagem: 'lud.jpg',
+            imgData: 'lud.jpg'
         },
     ]
 }
 
 $(document).ready(function() {
+
         let database = localStorage.getItem("adestradores");
+    
         database = !database ? localStorage.setItem("adestradores", JSON.stringify(dadosformu)) : JSON.parse(database);
+        
+
 })
 
 

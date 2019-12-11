@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="bdform.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB7_ySfWJPbn4QsaQiFVdyjuOU9v_eMeo&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB7_ySfWJPbn4QsaQiFVdyjuOU9v_eMeo&libraries=places&callback=initMap" async defer></script>
 
 
 	<title>VetEnsina - Formulário</title>
@@ -30,15 +30,6 @@
     </header>
     <div id="map" onload="initMap();">
     </div>
-    <script>
-        var map;
-        function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: -34.397, lng: 150.644},
-            zoom: 8
-        });
-        }
-    </script>
     <footer>
         <div class="rodape">
             <div class="opcoes">
@@ -62,4 +53,82 @@
         </div>
     </footer>
 </body>
+<script>
+    var map, infoWindow;;
+
+        function initMap() {
+        
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                        };
+
+                         map = new google.maps.Map(document.getElementById('map'), {
+                            center: {lat: -34.397, lng: 150.644},
+                            zoom: 12
+                        });
+                            
+                        infoWindow = new google.maps.InfoWindow({map: map});
+
+                        infoWindow.setPosition(pos);
+                        infoWindow.setContent('Você está aqui =D');
+                        map.setCenter(pos);
+
+                        var marker = new google.maps.Marker({
+                            position: pos,
+                            map: map,
+                            title: 'marker with infoWindow',
+                        });
+                        marker.addListener('click', function() {
+                            infoWindow.open(map, marker);
+                        });
+                        
+                        var requisicao = {
+                            name: 'Veterinario',
+                            location: pos,
+                            radius: '10000',
+                        };
+
+                        service = new google.maps.places.PlacesService(map);
+                        service.nearbySearch(requisicao, callback);
+
+
+                    }, function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                  });
+                } else {
+                  handleLocationError(false, infoWindow, map.getCenter());
+                }
+        }
+        
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                                'Error: The Geolocation service failed.' :
+                                'Error: Your browser doesn\'t support geolocation.');
+        }
+
+        function callback(results, status) {
+            if (status == google.maps.places.PlacesServiceStatus.OK) {
+                for (var i = 0; i < results.length; i++) {
+                var place = results[i];
+                createMarker(results[i]);
+                }
+            }
+        }
+
+        function createMarker(place) {
+            var marker = new google.maps.Marker({
+            map: map,
+            position: place.geometry.location
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+            infoWindow.setContent(place.name);
+            infoWindow.open(map, this);
+            });
+        }
+        </script>
 </html>
